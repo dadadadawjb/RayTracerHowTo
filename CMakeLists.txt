@@ -8,8 +8,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 include_directories(/usr/local/include)
 
-add_executable(RayTracerHowTo main.cpp Vector.hpp global.hpp OBJ_Loader.hpp 
-        Scene.hpp Scene.cpp Object.hpp Sphere.hpp Triangle.hpp Light.hpp Light.cpp 
-        BVH.hpp BVH.cpp AABB.hpp Ray.hpp Material.hpp Intersection.hpp 
-        raytracer.hpp raytracer.cpp)
+add_executable(RayTracerHowTo main.cpp vector.hpp global.hpp scene.hpp scene.cpp 
+        camera.hpp aabb.hpp bvh.hpp bvh.cpp intersection.hpp light.hpp light.cpp 
+        material.hpp ray.hpp raytracer.hpp raytracer.cpp object.hpp OBJ_loader.hpp 
+        triangle.hpp sphere.hpp)
 target_link_libraries(RayTracerHowTo ${OpenCV_LIBRARIES})
